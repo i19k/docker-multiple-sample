@@ -7,8 +7,6 @@ services:
     build: ./b
     image: second
     depends_on: [ first ]
-    ports:
-      - "3892:3892"
     networks:
       - local
   third:
@@ -16,13 +14,11 @@ services:
     image: third
     depends_on: [ first ]
     ports:
-      - "3893:3893"
+      - "8080:3893"
     networks:
       - local
-    extra_hosts:
-      - "localhost:192.168.1.40"
+    volumes:
+      - ./storage:/app/files
 networks:
   local:
     driver: bridge
-    
-    
