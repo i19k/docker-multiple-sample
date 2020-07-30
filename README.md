@@ -9,7 +9,7 @@ Main image is from *miniconda* and sample application contains a flask server.
 # Run
     docker-compose run
     
-Go to http://localhost:3892 and http://localhost:3893
+Go to http://localhost:8080
 
 
 # services
